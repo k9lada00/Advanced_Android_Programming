@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class Lab_2_2 extends AppCompatActivity
 {
+
     int clicks = 0;
 
     @SuppressLint("SetTextI18n")

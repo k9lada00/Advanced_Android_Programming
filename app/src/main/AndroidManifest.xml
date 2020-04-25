@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Lab_2_2">
+        <activity android:name=".Lab_2_5" />
+        <activity android:name=".Lab_2_4" />
+        <activity android:name=".Lab_2_3" />
+        <activity android:name=".Lab_2_2" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
