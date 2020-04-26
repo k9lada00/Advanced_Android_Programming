@@ -3,102 +3,106 @@ package com.zuul.advancedAndroidProgramming.Lab2;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListView;
-
-import java.util.ArrayList;
+import android.widget.TextView;
 
 public class Lab_2_4 extends AppCompatActivity
 {
-    private final Countries countries = new Countries();
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
 
-        //Testing Adapter
-        countries.addCountry("Finland");
-        countries.addCountry("Iceland");
-        countries.addCountry("Estonia");
-        countries.addCountry("Lativa");
-        countries.addCountry("Lithuania");
+        //Set main Layout
+        LinearLayout languageMainLayout = new LinearLayout(this);
+        languageMainLayout.setOrientation(LinearLayout.VERTICAL);
+        languageMainLayout.setPadding(40, 40, 40, 40);
 
-        //Layout Setup
-        LinearLayout labLayout = new LinearLayout(this);
-        labLayout.setOrientation(LinearLayout.VERTICAL);
-        labLayout.setPadding(40,40,40,40);
+        //Edit Text Field at the Top
+        final EditText inputName = new EditText(this);
 
-        //First Section
-        LinearLayout btnLayout = new LinearLayout(this);
-        btnLayout.setOrientation(LinearLayout.HORIZONTAL);
-        btnLayout.setHorizontalGravity(1);
+        //English and Finnish layout
+        LinearLayout topButtonsLayout = new LinearLayout(this);
+        topButtonsLayout.setOrientation(LinearLayout.HORIZONTAL);
+        topButtonsLayout.setHorizontalGravity(1);
 
-        //Buttons
-        Button addBtn = new Button(this); addBtn.setText("Add");
-        Button editBtn = new Button(this); editBtn.setText("Edit");
-        Button removeBtn = new Button(this); removeBtn.setText("Remove");
+        Button englishBtn = new Button(this); englishBtn.setText("English");
+        Button finnishBtn = new Button(this); finnishBtn.setText("Suomeksi");
 
-        //First Section Layout
-        btnLayout.addView(addBtn);
-        btnLayout.addView(editBtn);
-        btnLayout.addView(removeBtn);
+        topButtonsLayout.addView(englishBtn);
+        topButtonsLayout.addView(finnishBtn);
 
-        //Second Section
-        LinearLayout listLayout = new LinearLayout(this);
-        listLayout.setOrientation(LinearLayout.VERTICAL);
+        //Swedish and Norwegian (surprise) layout
+        LinearLayout bottomButtonsLayout = new LinearLayout(this);
+        bottomButtonsLayout.setOrientation(LinearLayout.HORIZONTAL);
+        bottomButtonsLayout.setHorizontalGravity(1);
 
-        //Edit Text
-        final EditText editCountries = new EditText(this);
+        Button swedishBtn = new Button (this); swedishBtn.setText("Sverige");
+        Button surpriseBtn = new Button (this); surpriseBtn.setText("Surprise");
 
-        //List View
-        ListView countriesList = new ListView(this);
+        bottomButtonsLayout.addView(swedishBtn);
+        bottomButtonsLayout.addView(surpriseBtn);
 
-        //Retrieving the List
-        ArrayList<String> countryList = countries.getList();
+        //Greeting
+        LinearLayout greetingContainer = new LinearLayout(this);
+        greetingContainer.setHorizontalGravity(1);
+        greetingContainer.setPadding(40, 40,40,40);
 
-        //Array Adapter
-        final ArrayAdapter<String> countryAdapter;
-        countryAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, countryList);
-        countriesList.setAdapter(countryAdapter);
+        final TextView languageGreeting = new TextView(this);
+        languageGreeting.setText("");
 
-        //Second Section Layout
-        listLayout.addView(editCountries);
-        listLayout.addView(countriesList);
+        greetingContainer.addView(languageGreeting);
 
-        //Setting up the Content View
-        labLayout.addView(btnLayout);
-        labLayout.addView(listLayout);
-        setContentView(labLayout);
-
-
-        //Setting On Click Listeners
-        //Adding a country
-        addBtn.setOnClickListener(new View.OnClickListener()
+        englishBtn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                String addingCountry = editCountries.getText().toString();
-                countries.addCountry(addingCountry);
-                countryAdapter.notifyDataSetChanged();
-                editCountries.setText("");
+                String nameString = inputName.getText().toString();
+                languageGreeting.setText("Hello, " + nameString + "!");
             }
         });
 
-        //Removing a country
-        removeBtn.setOnClickListener(new View.OnClickListener()
+        finnishBtn.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
-                String removingCountry = editCountries.getText().toString();
-                countries.removeCountry(removingCountry);
-                editCountries.setText("");
+                String nameString = inputName.getText().toString();
+                languageGreeting.setText("Terve, " + nameString + "!");
             }
         });
+
+        swedishBtn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                String nameString = inputName.getText().toString();
+                languageGreeting.setText("Hejjsan, " + nameString + "!");
+            }
+        });
+
+        surpriseBtn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                String nameString = inputName.getText().toString();
+                languageGreeting.setText("Hallo, " + nameString + "!");
+            }
+        });
+
+
+        //Filling Main Layout view
+        languageMainLayout.addView(inputName);
+        languageMainLayout.addView(topButtonsLayout);
+        languageMainLayout.addView(bottomButtonsLayout);
+        languageMainLayout.addView(greetingContainer);
+
+        //Set Main View
+        setContentView(languageMainLayout);
     }
 }

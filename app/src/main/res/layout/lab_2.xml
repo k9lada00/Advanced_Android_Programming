@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="60dp"
     tools:context=".Lab2.Lab2">
 
     <LinearLayout
@@ -86,14 +87,6 @@
         app:layout_constraintTop_toBottomOf="@id/lab_2_4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:onClick="select25"
-            android:text="Lab_2_5" />
-
-    </LinearLayout>
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

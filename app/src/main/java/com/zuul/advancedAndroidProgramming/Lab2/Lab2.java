@@ -39,10 +39,4 @@ public class Lab2 extends AppCompatActivity
         Intent i = new Intent (this, Lab_2_4.class);
         startActivity(i);
     }
-
-    public void select25(View v)
-    {
-        Intent i = new Intent (this, Lab_2_5.class);
-        startActivity(i);
-    }
 }
