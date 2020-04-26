@@ -7,11 +7,29 @@
     tools:context=".Lab2.Lab2">
 
     <LinearLayout
-        android:id="@+id/lab_2_2"
+        android:id="@+id/lab_2_1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/lab_2_2">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="select21"
+            android:text="Lab_2_1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lab_2_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/lab_2_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/lab_2_3">

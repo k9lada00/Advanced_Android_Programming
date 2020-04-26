@@ -16,6 +16,12 @@ public class Lab2 extends AppCompatActivity
         setContentView(R.layout.lab_2);
     }
 
+    public void select21(View v)
+    {
+        Intent i = new Intent (this, Lab_2_1.class);
+        startActivity(i);
+    }
+
     public void select22(View v)
     {
         Intent i = new Intent (this, Lab_2_2.class);
