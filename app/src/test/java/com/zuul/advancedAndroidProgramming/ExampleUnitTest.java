@@ -1,4 +1,4 @@
-package com.zuul.uiprogrammatically;
+package com.zuul.advancedAndroidProgramming;
 
 import org.junit.Test;
 

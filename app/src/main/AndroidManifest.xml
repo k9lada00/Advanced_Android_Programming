@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zuul.uiprogrammatically">
+    package="com.zuul.advancedAndroidProgramming">
 
     <application
         android:allowBackup="true"
@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Lab_2_5" />
-        <activity android:name=".Lab_2_4" />
-        <activity android:name=".Lab_2_3" />
-        <activity android:name=".Lab_2_2" />
+        <activity android:name=".Lab4.Lab4"></activity>
+        <activity android:name=".Lab3.Lab3" />
+        <activity android:name=".Lab1.Lab1" />
+        <activity android:name=".Lab2.Lab2" />
+        <activity android:name=".Lab2.Lab_2_5" />
+        <activity android:name=".Lab2.Lab_2_4" />
+        <activity android:name=".Lab2.Lab_2_3" />
+        <activity android:name=".Lab2.Lab_2_2" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

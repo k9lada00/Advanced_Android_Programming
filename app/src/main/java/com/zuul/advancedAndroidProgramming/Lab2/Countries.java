@@ -1,6 +1,5 @@
-package com.zuul.uiprogrammatically;
+package com.zuul.advancedAndroidProgramming.Lab2;
 
-import android.widget.ArrayAdapter;
 import java.util.ArrayList;
 
 public class Countries

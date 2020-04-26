@@ -1,4 +1,4 @@
-package com.zuul.uiprogrammatically;
+package com.zuul.advancedAndroidProgramming.Lab2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

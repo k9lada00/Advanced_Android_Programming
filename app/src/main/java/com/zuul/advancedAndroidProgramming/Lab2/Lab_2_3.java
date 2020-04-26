@@ -1,8 +1,7 @@
-package com.zuul.uiprogrammatically;
+package com.zuul.advancedAndroidProgramming.Lab2;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +10,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class Lab_2_4 extends AppCompatActivity
+public class Lab_2_3 extends AppCompatActivity
 {
     private final Countries countries = new Countries();
 
@@ -52,7 +51,7 @@ public class Lab_2_4 extends AppCompatActivity
         listLayout.setOrientation(LinearLayout.VERTICAL);
 
         //Edit Text
-        final EditText editCountries = new EditText(this);
+        EditText editCountries = new EditText(this);
 
         //List View
         ListView countriesList = new ListView(this);
@@ -73,32 +72,5 @@ public class Lab_2_4 extends AppCompatActivity
         labLayout.addView(btnLayout);
         labLayout.addView(listLayout);
         setContentView(labLayout);
-
-
-        //Setting On Click Listeners
-        //Adding a country
-        addBtn.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                String addingCountry = editCountries.getText().toString();
-                countries.addCountry(addingCountry);
-                countryAdapter.notifyDataSetChanged();
-                editCountries.setText("");
-            }
-        });
-
-        //Removing a country
-        removeBtn.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                String removingCountry = editCountries.getText().toString();
-                countries.removeCountry(removingCountry);
-                editCountries.setText("");
-            }
-        });
     }
 }

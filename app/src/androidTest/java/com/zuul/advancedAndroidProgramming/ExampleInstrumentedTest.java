@@ -1,4 +1,4 @@
-package com.zuul.uiprogrammatically;
+package com.zuul.advancedAndroidProgramming;
 
 import android.content.Context;
 
