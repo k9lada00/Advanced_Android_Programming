@@ -23,8 +23,12 @@ public class Countries
     }
 
     //Remove a country from the list
-    public void removeCountry(int i)
+    public void removeCountry(String country)
     {
-        countries.remove(i);
+        this.countries.remove(country);
+        if(this.countries.size() > 0)
+        {
+            this.countries.remove(this.countries.size() - 1);
+        }
     }
 }
