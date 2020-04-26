@@ -27,7 +27,7 @@ public class Lab3 extends AppCompatActivity
 
     public void select32(View v)
     {
-        Intent i = new Intent (this, MainActivity.class);
+        Intent i = new Intent (this, Lab_3_2.class);
         startActivity(i);
     }
 

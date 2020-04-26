@@ -7,7 +7,6 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.zuul.advancedAndroidProgramming.R;
 
 public class Lab_3_1 extends AppCompatActivity
