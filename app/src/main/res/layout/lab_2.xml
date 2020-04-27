@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="select21"
-            android:text="Lab_2_1" />
+            android:text="Lab 2.1" />
 
     </LinearLayout>
 
@@ -39,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="select22"
-            android:text="Lab_2_2" />
+            android:text="Lab 2.2" />
 
     </LinearLayout>
 
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="select23"
-            android:text="Lab_2_3" />
+            android:text="Lab 2.3" />
 
     </LinearLayout>
 
@@ -75,7 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="select24"
-            android:text="Lab_2_4" />
+            android:text="Lab 2.4" />
 
     </LinearLayout>
 
@@ -84,6 +84,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/lab_2_4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

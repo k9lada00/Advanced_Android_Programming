@@ -10,5 +10,6 @@ public class Lab_1_2 extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.lab_1_2);
     }
 }

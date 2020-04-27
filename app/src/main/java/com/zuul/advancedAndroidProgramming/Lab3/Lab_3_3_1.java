@@ -10,54 +10,51 @@ import android.view.View;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.zuul.advancedAndroidProgramming.R;
 
-public class Lab_3_3 extends AppCompatActivity
+public class Lab_3_3_1 extends AppCompatActivity
 {
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.lab_3_3);
+        setContentView(R.layout.lab_3_3_1);
 
-        ImageView wolf = findViewById(R.id.wolf);
-        ImageView bear = findViewById(R.id.bear);
-        ImageView elephant = findViewById(R.id.elephant);
-        ImageView lamb = findViewById(R.id.lamb);
+        ImageView huuhkaja = findViewById(R.id.huuhkaja);
+        ImageView peippo = findViewById(R.id.peippo);
+        ImageView peukaloinen = findViewById(R.id.peukaloinen);
+        ImageView punatulkku = findViewById(R.id.punatulkku);
 
-        wolf.setOnClickListener(new View.OnClickListener()
+        huuhkaja.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
                 MediaPlayer mediaPlayer;
-                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.wolf_sound);
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.huuhkaja_norther_eagle_owl);
                 mediaPlayer.start();
             }
         });
-        bear.setOnClickListener(new View.OnClickListener()
-        {
+        peippo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MediaPlayer mediaPlayer;
-                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.bear_sound);
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.peippo_chaffinch);
                 mediaPlayer.start();
             }
         });
-        elephant.setOnClickListener(new View.OnClickListener()
-        {
+        peukaloinen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MediaPlayer mediaPlayer;
-                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.elephant_sound);
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.peukaloinen_wren);
                 mediaPlayer.start();
             }
         });
-        lamb.setOnClickListener(new View.OnClickListener()
-        {
+        punatulkku.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 MediaPlayer mediaPlayer;
-                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.lamb_sound);
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.punatulkku_northern_bullfinch);
                 mediaPlayer.start();
             }
         });

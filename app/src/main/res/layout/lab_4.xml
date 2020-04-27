@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="select41"
-            android:text="Lab_4_1" />
+            android:text="Lab 4.1" />
 
     </LinearLayout>
 
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:onClick="select42"
-            android:text="Lab_4_2" />
+            android:text="Lab 4.2" />
 
     </LinearLayout>
 

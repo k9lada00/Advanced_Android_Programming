@@ -1,12 +1,12 @@
 package com.zuul.advancedAndroidProgramming.Lab3;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-
 import com.zuul.advancedAndroidProgramming.R;
 
 public class Lab_3_2 extends AppCompatActivity
@@ -15,42 +15,45 @@ public class Lab_3_2 extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.lab_3_2);
 
-        //Main Layout
-        LinearLayout oamkHomePage = new LinearLayout(this);
-        oamkHomePage.setOrientation(LinearLayout.VERTICAL);
+        Button map = findViewById(R.id.openMap);
+        Button call = findViewById(R.id.usePhone);
+        Button go = findViewById(R.id.searchWeb);
 
-        //First Layout
-        LinearLayout mapLayout = new LinearLayout(this);
-        Button openMap = new Button(this);
-        openMap.setText("Open Map");
-        mapLayout.addView(openMap);
+        final EditText editText = findViewById(R.id.editText);
 
-        //Second layout
-        LinearLayout callLayout = new LinearLayout(this);
-        Button makeCall = new Button(this);
-        makeCall.setText("Call OAMK");
-        callLayout.addView(makeCall);
+        map.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Uri location = Uri.parse("geo:0,0?q=Kotkantie+1,+Oulu");
+                Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);;
+                startActivity(mapIntent);
+            }
+        });
 
-        //Third Layout
-        LinearLayout websiteLayout = new LinearLayout(this);
-        websiteLayout.setOrientation(LinearLayout.HORIZONTAL);
-        EditText inputWebsite = new EditText(this);
-        Button searchWeb = new Button(this);
-        searchWeb.setText("Go");
-        websiteLayout.addView(inputWebsite);
-        websiteLayout.addView(searchWeb);
+        call.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Uri number = Uri.parse("tel:040 1415510");
+                Intent callIntent = new Intent(Intent.ACTION_VIEW, number);
+                startActivity(callIntent);
+            }
+        });
 
-        //Forth Layout
-        LinearLayout imageLayout = new LinearLayout(this);
-        ImageView oamkLogo = new ImageView(this);
-        imageLayout.addView(oamkLogo);
-
-        //Filling the Main Layout
-        oamkHomePage.addView(mapLayout);
-        oamkHomePage.addView(callLayout);
-        oamkHomePage.addView(websiteLayout);
-        oamkHomePage.addView(imageLayout);
-        setContentView(oamkHomePage);
+        go.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Uri webpage = Uri.parse(editText.getText().toString());
+                Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(webIntent);
+            }
+        });
     }
 }
